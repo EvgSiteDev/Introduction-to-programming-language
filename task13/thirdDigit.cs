@@ -7,7 +7,7 @@ void searchForTheThirdDigit(int theDesiredFigure)
     string stringNum = Console.ReadLine()!;
     if (stringNum.Length >= theDesiredFigure)
     {
-        Console.WriteLine(theDesiredFigure + " цифра числа " + stringNum + " = " + stringNum[2]);
+        Console.WriteLine(theDesiredFigure + " цифра числа " + stringNum + " = " + stringNum[theDesiredFigure]);
     }
     else
     {
