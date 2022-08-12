@@ -5,7 +5,7 @@ void searchForTheThirdDigit(int theDesiredFigure)
     Console.WriteLine("______________________________________");
     Console.Write("Введите целое число: ");
     string stringNum = Console.ReadLine()!;
-    if (stringNum.Length >= 3)
+    if (stringNum.Length >= theDesiredFigure)
     {
         Console.WriteLine(theDesiredFigure + " цифра числа " + stringNum + " = " + stringNum[2]);
     }
