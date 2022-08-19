@@ -1,10 +1,4 @@
-﻿// Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
-
-// [3, 7, 23, 12] -> 19
-
-// [-4, -6, 89, 6] -> 0
-
-int[] createArray()
+﻿double[] createArray()
 {
     Console.Write("Введите размер массива: ");
     string lengthStr = Console.ReadLine()!;
@@ -23,16 +17,16 @@ int[] createArray()
             }
             else break;
         }
-        int[] arr = new int[int.Parse(lengthStr)];
+        double[] arr = new double[int.Parse(lengthStr)];
         var random = new Random();
         for (int i = 0; i < arr.Length; i++)
         {
-            arr[i] = random.Next(-99, 100);
+            arr[i] = random.Next(1, 100);
         }
         return arr;
     }
 }
-void printArray(int[] array)
+void printArray(double[] array)
 {
     string result = "Сгенерируемый массив: [";
     for (int i = 0; i < array.Length; i++)
@@ -50,16 +44,13 @@ void printArray(int[] array)
     result += "]";
     Console.WriteLine(result);
 }
-
-int summNumInOddPositions(int[] array)
+double diffBetweenMinAndMaxArr(double[] array)
 {
-    int summ = 0;
-    for (int i = 0; i < array.Length; i = i + 2)
-    {
-        summ += array[i];
-    }
-    return summ;
+    double diff = array.Max() - array.Min();
+    return diff;
 }
-int[] array = createArray();
+
+double[] array = createArray();
 printArray(array);
-Console.WriteLine("Сумма чисел на нечетных позициях массива = " + summNumInOddPositions(array));
+Console.WriteLine("Разница между максимальным значением массива и минимальным составит: " + diffBetweenMinAndMaxArr(array));
+

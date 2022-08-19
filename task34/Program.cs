@@ -73,4 +73,4 @@ int searchEvenInArray(int[] array)
 }
 int[] array = createArray();
 printArray(array);
-Console.WriteLine("Количество четных элементов = "+ searchEvenInArray(array));
+Console.WriteLine("Количество четных элементов = " + searchEvenInArray(array));
